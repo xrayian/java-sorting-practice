@@ -7,11 +7,18 @@ public class InsertionSort {
         this.arr = arr.clone(); //cloning to have a separate instance of the array
     }
 
+    private void insertItemDescending(int sortedUpto) {
+        int key = arr[sortedUpto + 1];
+        for (;sortedUpto >= 0 && arr[sortedUpto] < key; sortedUpto--) {
+            shiftItems(sortedUpto);
+        }
+        arr[sortedUpto + 1] = key;
+    }
+
     private void insertItem(int sortedUpto) {
         int key = arr[sortedUpto + 1];
         for (;sortedUpto >= 0 && arr[sortedUpto] > key; sortedUpto--) {
             shiftItems(sortedUpto);
-
         }
         arr[sortedUpto + 1] = key;
     }
@@ -24,6 +31,14 @@ public class InsertionSort {
         for (int i = 1; i < arr.length; i++) {
             int sortedUpto = i - 1;
             insertItem(sortedUpto);
+        }
+        return arr;
+    }
+
+    public int[] sortDescending() {
+        for (int i = 1; i < arr.length; i++) {
+            int sortedUpto = i - 1;
+            insertItemDescending(sortedUpto);
         }
         return arr;
     }

@@ -29,7 +29,7 @@ public class Main {
 
         int[] sortedArr = new SelectionSort(arr).sort();
         int[] sortedArr2 = new BubbleSort(arr).sort();
-        int[] sortedArr3 = new InsertionSort(arr).sort();
+        int[] sortedArr3 = new InsertionSort(arr).sortDescending();
 
 
         System.out.println("\n\nSorted Array:");
@@ -47,7 +47,7 @@ public class Main {
         for (int i : sortedArr3) {
             System.out.print(i + " ");
         }
-        System.out.println("[Insertion Sort]");
+        System.out.println("[Insertion Sort (Descending)]");
 
     }
 }
