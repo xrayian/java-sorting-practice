@@ -4,7 +4,7 @@ public class SelectionSort {
     int[] arr;
 
     SelectionSort(int[] arr) {
-        this.arr = arr.clone();
+        this.arr = arr.clone(); //cloning to have a separate instance of the array
     }
 
     private void swap(int i, int j) {

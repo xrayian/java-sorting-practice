@@ -28,15 +28,11 @@ public class Main {
         }
 
         int[] sortedArr = new SelectionSort(arr).sort();
-
-        System.out.println("\nUnsorted Array: ");
-        for (int i : arr) {
-            System.out.print(i + " ");
-        }
         int[] sortedArr2 = new BubbleSort(arr).sort();
+        int[] sortedArr3 = new InsertionSort(arr).sort();
 
 
-        System.out.println("\nSorted Array:");
+        System.out.println("\n\nSorted Array:");
 
         for (int i : sortedArr) {
             System.out.print(i + " ");
@@ -47,6 +43,11 @@ public class Main {
             System.out.print(i + " ");
         }
         System.out.println("[Bubble Sort]");
+
+        for (int i : sortedArr3) {
+            System.out.print(i + " ");
+        }
+        System.out.println("[Insertion Sort]");
 
     }
 }

@@ -4,7 +4,7 @@ public class BubbleSort {
     int[] arr;
 
     BubbleSort(int[] arr) {
-        this.arr = arr.clone();
+        this.arr = arr.clone(); //cloning to have a separate instance of the array
     }
 
     private void bubbleToTop(int boundary) {
